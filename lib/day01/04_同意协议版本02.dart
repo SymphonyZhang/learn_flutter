@@ -30,9 +30,15 @@ class YXHomePage extends StatelessWidget {
   }
 }
 
-//这个代码是有问题的，错误代码
-class YXContentBody extends StatelessWidget {
-  //错误代码
+//flag : 状态
+class YXContentBody extends StatefulWidget {
+  YXContentBody({Key key}) : super(key: key);
+
+  @override
+  _YXContentBodyState createState() => _YXContentBodyState();
+}
+
+class _YXContentBodyState extends State<YXContentBody> {
   var flag = true;
 
   @override
@@ -43,7 +49,11 @@ class YXContentBody extends StatelessWidget {
         children: <Widget>[
           Checkbox(
             value: flag,
-            onChanged: (value) => flag = value,
+            onChanged: (value) {
+              setState(() {
+                flag = value;
+              });
+            },
           ),
           Text(
             '同意协议',
