@@ -1,6 +1,7 @@
+//这个代码是有问题的，错误代码
 class YXContentBody extends StatelessWidget {
   //错误代码
-  final flag = true;
+  var flag = true;
 
   @override
   Widget build(BuildContext context) {
