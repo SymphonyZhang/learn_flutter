@@ -30,7 +30,10 @@ class YXHomePage extends StatelessWidget {
   }
 }
 
-//flag : 状态
+// StatefulWidget 的使用包含2个类: 继承自StatefulWidget的类(1.创建一个State 2.可以接收父Widget传过来的数据) / State类(状态)
+
+// flag : 状态
+// StatefulWidget 不能定义状态 -> 创建一个单独的类，这个类负责维护状态
 class YXContentBody extends StatefulWidget {
   YXContentBody({Key key}) : super(key: key);
 
