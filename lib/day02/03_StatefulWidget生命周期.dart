@@ -18,8 +18,6 @@ class YXHomePage extends StatefulWidget {
 }
 
 class _YXHomePageState extends State<YXHomePage> {
-  final List<Widget> widgets = [YXHomeContent()];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,14 +25,14 @@ class _YXHomePageState extends State<YXHomePage> {
         title: Text('商品列表'),
       ),
       body: Column(
-        children: widgets,
+        children: [
+          YXHomeContent(),
+        ],
       ),
       floatingActionButton: RaisedButton(
         child: Icon(Icons.add),
         onPressed: () {
-          setState(() {
-            widgets.insert(0, Text('Hello world'));
-          });
+          setState(() {});
         },
       ),
     );
