@@ -50,3 +50,23 @@ class ButtonExtensionDemo extends StatelessWidget {
     );
   }
 }
+
+class IconExtensionDemo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // Icon字体图标和图片图标
+    // 1. 字体图标矢量图(放大的时候不会失真)
+    // 2. 字体图标可以设置颜色
+    // 3. 图标很多时，占据空间更小
+    //return Icon(Icons.pets,size:300,color:Colors.orange,);
+    //return Icon(IconData(0xe91d, fontFamily: 'MaterialIcons'),size: 300, color: Colors.orange,);
+
+    // 1. 0xe91d -> unicode编码
+    // 2. 设置对应的字体
+    return Text(
+      '\ue91d',
+      style: TextStyle(
+          fontSize: 100, color: Colors.orange, fontFamily: 'MaterialIcons'),
+    );
+  }
+}
